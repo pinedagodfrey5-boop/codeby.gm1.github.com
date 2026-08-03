@@ -1,3 +1,5 @@
+panaginip-Nicole paki remove lang
+
 const lines = [
   { text:"PAULIT-ULIT KANG", time:0 },
   { text:"TUMATAKBO SA ISIP", time:6 },
