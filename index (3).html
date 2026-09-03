@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating petals -->
+    <div class="hearts" id="hearts"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>My Dearest Love</h1>
+        <p>Every day with you feels like a beautiful dream I never want to wake up from.</p>
+        <div class="scroll-down" onclick="document.getElementById('letter').scrollIntoView({behavior: 'smooth'})">↓</div>
+    </section>
+
+    <!-- Love Letter -->
+    <section id="letter">
+        <h2 class="section-title">A Letter For You</h2>
+        <div class="letter">
+            <p>My love,</p>
+            <br>
+            <p>There are a million things I could say, but none of them fully capture how much you mean to me. You are my peace, my laughter, my favorite person in the entire world.</p>
+            <br>
+            <p>Thank you for being you — for your smile that lights up my darkest days, for your kindness that makes the world softer, and for loving me the way you do.</p>
+            <br>
+            <p>I don’t know what I did to deserve you, but I promise to spend every day trying to make you as happy as you make me.</p>
+            <br>
+            <p style="text-align: right; margin-top: 20px;">Forever yours,<br><strong>babe Lam²☺️</strong> ❤️</p>
+        </div>
+    </section>
+
+    <!-- Reasons -->
+    <section>
+        <h2 class="section-title">Why I Love You</h2>
+        <div class="reasons">
+            <div class="reason-card">
+                <div class="emoji">😊</div>
+                <h3>Your Smile</h3>
+                <p>It has the power to turn any ordinary day into something magical.</p>
+            </div>
+            <div class="reason-card">
+                <div class="emoji">🤍</div>
+                <h3>Your Heart</h3>
+                <p>The way you care for others shows me how beautiful a soul can be.</p>
+            </div>
+            <div class="reason-card">
+                <div class="emoji">✨</div>
+                <h3>Your Presence</h3>
+                <p>Just being near you makes everything feel right in the world.</p>
+            </div>
+            <div class="reason-card">
+                <div class="emoji">🌙</div>
+                <h3>Our Moments</h3>
+                <p>Every memory with you is a treasure I hold close to my heart.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+        <h2 class="section-title">Our Memories</h2>
+       <div class="gallery">
+    <div class="photo">
+        <img src="Screenshot_20260808-201447_Facebook.jpg" alt="Memory 1">
+    </div>
+    <div class="photo">
+        <img src="20260827_145200.jpg" alt="Memory 2">
+    </div>
+    <div class="photo">
+        <img src="20260827_145251.jpg" alt="Memory 3">
+    </div>
+    <div class="photo">
+        <img src="20260827_145417.jpg" alt="Memory 4">
+    </div>
+</div>
+        <p style="text-align: center; margin-top: 25px; color: #8b4557;">
+            
+        </p>
+    </section>
+
+    <!-- Final -->
+    <section class="final">
+        <h2>I Love You</h2>
+        <p>More than words can ever express.<br>More than the stars in the sky.<br>More than anything.</p>
+        <button class="heart-btn" onclick="showLove()">Click for a Surprise ❤️</button>
+        <p id="surprise" style="margin-top: 30px; font-size: 1.4rem; color: #d6336c; opacity: 0; transition: opacity 0.8s;"></p>
+    </section>
+
+    <script>
+        // Create floating petals
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❀';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 7 + 5) + 's';
+                heart.style.animationDelay = Math.random() * 6 + 's';
+                heart.style.fontSize = (Math.random() * 14 + 12) + 'px';
+                heartsContainer.appendChild(heart);
+            }
+        }
+        createHearts();
+
+        // Surprise button
+        function showLove() {
+            const messages = [
+                "You are the best thing that ever happened to me ❤️",
+                "I fall in love with you more every single day",
+                "My heart belongs to you... forever",
+                "You make ordinary moments extraordinary",
+                "Thank you for being my home"
+            ];
+            const surprise = document.getElementById('surprise');
+            surprise.textContent = messages[Math.floor(Math.random() * messages.length)];
+            surprise.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
